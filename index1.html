@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style-type: none;
+      }
+      header {
+        width: 100vw;
+        background-color: #ffffff;
+      }
+      #headerTop {
+        width: 100vw;
+        height: 30px;
+        position: relative;
+      }
+      #headerTop > ul {
+        border: 1px solid #000000;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      #headerTop > ul > li {
+        display: inline-block;
+        border: 1px solid #000000;
+        text-align: center;
+        font-size: 14px;
+      }
+      #headerBottom {
+        width: 100vw;
+        height: 70px;
+        border: 1px solid #000000;
+        position: relative;
+        display: flex;
+      }
+      #logoImg {
+        flex: 1;
+        /*width:30%;
+             position:absolute;
+            left:0;
+            top:50%;
+            transform: translateY(-50%); */
+        border: 1px solid #000000;
+      }
+      nav {
+        flex: 3;
+      }
+      #mainMenu {
+        width: 100%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+      }
+      #mainMenu > a{
+        height:100%;
+        border:1px solid black;
+        display: flex;
+        align-items: center;
+      }
+      #mainMenu > a > li {
+        display: inline-block;
+        border: 1px solid #000000;
+        text-align: center;
+        padding: 0px 5px;
+        margin: 0px 5px;
+        line-height:100%;
+      }
+      .boldMenu {
+        font-weight: bold;
+      }
+      #iconMenu {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #iconMenu span{
+        font-size: 32px;
+      }
+      #search {
+        background-color: #ececec;
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+      #search > input {
+        border: none;
+        padding: 0px 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="headerTop">
+        <ul>
+          <li>도움말</li>
+          <li>반품</li>
+          <li>배송 추적</li>
+          <li>아디클럽 가입하기</li>
+        </ul>
+      </div>
+      <div id="headerBottom">
+        <div id="logoImg"></div>
+        <nav>
+          <ul id="mainMenu">
+            <a href="#"><li class="boldMenu">MEN</li></a>
+            <a href="#"><li class="boldMenu">WOMEN</li></a>
+            <a href="#"><li class="boldMenu">KIDS</li></a>
+            <a href="#"><li>SPORTS</li></a>
+            <a href="#"><li>BRANDS</li></a>
+            <a href="#"><li class="boldMenu">ONLINE OUTLET</li></a>
+          </ul>
+        </nav>
+        <div id="iconMenu">
+          <span class="material-symbols-outlined"> search </span>
+          <!--누르면 검색창 연결-->
+          <span class="material-symbols-outlined"> person </span>
+          <span class="material-symbols-outlined"> favorite </span>
+          <span class="material-symbols-outlined"> local_mall </span>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+</html>
