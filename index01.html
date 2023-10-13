@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "IBM Plex Sans KR", sans-serif;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style-type: none;
+      }
+      header {
+        width: 100vw;
+        background-color: #ffffff;
+      }
+      #headerTop {
+        width: 100vw;
+        height: 30px;
+        position: relative;
+      }
+      #headerTop > ul {
+        /* border: 1px solid #000000; */
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translateY(-50%);
+      }
+      #headerTop > ul > a {
+        border-right: 1px solid #ccc;
+      }
+      #headerTop > ul > a:hover {
+        font-weight: 600;
+      }
+      #headerTop > ul > a > li {
+        display: inline-block;
+        text-align: center;
+        padding: 0px 15px;
+        font-size: 14px;
+      }
+      #headerBottom {
+        width: 100vw;
+        height: 70px;
+        border: 1px solid #000000;
+        position: relative;
+        display: flex;
+      }
+      #logoImg {
+        flex: 1;
+        border: 1px solid #000000;
+      }
+      nav {
+        flex: 3;
+      }
+      #mainMenu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+      }
+      #mainMenu > li {
+        padding: 0px 15px;
+      }
+      #mainMenu > li:hover {
+        border-bottom: 3px solid #000000;
+      }
+      #mainMenu > li > a {
+        display: inline-block;
+        text-align: center;
+        padding: 20px 15px;
+      }
+      .boldMenu {
+        font-weight: 600;
+      }
+      #iconMenu {
+        flex: 1;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #iconMenu span {
+        font-size: 32px;
+      }
+      .dropdownMenu {
+        width: 100vw;
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        border: 1px solid #000000;
+        display: flex;
+        visibility: hidden;
+      }
+      #menSubLeft,
+      #womenSubLeft {
+        height: 100%;
+        width: 30%;
+        display: flex;
+        flex-flow: column;
+      }
+      #menSubLeft li >a,
+      #womenSubLeft >li>a{
+        flex: 1;
+        border-bottom: 1px solid black;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 200;
+        display: inline-block;
+        width:100%;
+        padding:15px 0px;        
+      }
+      #menSubLeft >li>a:hover,
+      #womenSubLeft >li>a:hover {
+        font-weight: 600;
+      }
+      #menSubLeft {
+        background-color: cornflowerblue;
+      }
+      .menRightList,.womenRightList{
+        width:70%;
+        position: absolute;
+        right:0;
+        top:0;
+      }
+      #womenSubLeft {
+        background-color: indianred;
+      }
+      /* #menSubRight,#womenSubRight {
+        width: 70%;
+      } */
+      #rightBest{
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        /* display: none; */
+      }
+      #rightNew, #rightShoe,#rightCloth,#rightAcc{
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+      }
+      #rightBest > li, #rightNew >li, #rightShoe >li, #rightCloth >li, #rightAcc >li {
+        border: 1px solid black;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="headerTop">
+        <ul>
+          <a href="#"><li>도움말</li></a>
+          <a href="#"><li>반품</li></a>
+          <a href="#"><li>배송 추적</li></a>
+          <a href="#"><li>아디클럽 가입하기</li></a>
+        </ul>
+      </div>
+      <div id="headerBottom">
+        <div id="logoImg"></div>
+        <nav>
+          <ul id="mainMenu">
+            <li class="mainList boldMenu">
+              <a href="#">MEN</a>
+              <div id="menDropdownMenu" class="dropdownMenu">
+                <ul id="menSubLeft">
+                  <li class="menSubli"><a href="#">베스트셀러</a>
+                    <ul id="rightBest" class="menRightList">
+                    <li>베스트1</li>
+                    <li>베스트2</li>
+                    <li>베스트3</li>
+                    <li>베스트4</li>
+                  </ul>
+                  </li>
+                  <li class="menSubli"><a href="#">신상품</a>
+                    <ul id="rightNew" class="menRightList">
+                    <li>신상1</li>
+                    <li>신상2</li>
+                    <li>신상3</li>
+                    <li>신상4</li>
+                  </ul>
+                  </li>
+                  <li class="menSubli"><a href="#">신발</a>
+                    <ul id="rightShoe" class="menRightList">
+                    <li>신발1</li>
+                    <li>신발2</li>
+                    <li>신발3</li>
+                    <li>신발4</li>
+                  </ul>
+                  </li>
+                  <li class="menSubli"><a href="#">의류</a>
+                    <ul id="rightCloth" class="menRightList">
+                    <li>의류1</li>
+                    <li>의류2</li>
+                    <li>의류3</li>
+                    <li>의류4</li>
+                  </ul>
+                  </li>
+                  <li class="menSubli"><a href="#">용품</a>
+                    <ul id="rightAcc" class="menRightList">
+                    <li>용품1</li>
+                    <li>용품2</li>
+                    <li>용품3</li>
+                    <li>용품4</li>
+                  </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList boldMenu"><a href="#">WOMEN </a>
+              <div id="womenDropdownMenu" class="dropdownMenu">
+                <ul id="womenSubLeft">
+                  <li class="womenSubli"><a href="#">베스트셀러</a>
+                    <ul id="rightBest" class="womenRightList">
+                    <li>베스트1</li>
+                    <li>베스트2</li>
+                    <li>베스트3</li>
+                    <li>베스트4</li>
+                  </ul>
+                  </li>
+                  <li class="womenSubli"><a href="#">신상품</a>
+                    <ul id="rightNew" class="womenRightList">
+                    <li>신상1</li>
+                    <li>신상2</li>
+                    <li>신상3</li>
+                    <li>신상4</li>
+                  </ul>
+                  </li>
+                  <li class="womenSubli"><a href="#">신발</a>
+                    <ul id="rightShoe" class="womenRightList">
+                    <li>신발1</li>
+                    <li>신발2</li>
+                    <li>신발3</li>
+                    <li>신발4</li>
+                  </ul>
+                  </li>
+                  <li class="womenSubli"><a href="#">의류</a>
+                    <ul id="rightCloth" class="womenRightList">
+                    <li>의류1</li>
+                    <li>의류2</li>
+                    <li>의류3</li>
+                    <li>의류4</li>
+                  </ul>
+                  </li>
+                  <li class="womenSubli"><a href="#">용품</a>
+                    <ul id="rightAcc" class="womenRightList">
+                    <li>용품1</li>
+                    <li>용품2</li>
+                    <li>용품3</li>
+                    <li>용품4</li>
+                  </ul>
+                  </li>
+                </ul>
+                <div id="womenSubRight">
+                  
+                </div>
+              </div></li>
+            <li class="mainList boldMenu"><a href="#">KIDS</a></li>
+            <li class="mainList"><a href="#">SPORTS</a></li>
+            <li class="mainList"><a href="#">BRANDS</a></li>
+            <li class="mainList boldMenu"><a href="#">ONLINE OUTLET</a></li>
+          </ul>
+        </nav>
+        <div id="iconMenu">
+          <span class="material-symbols-outlined"> search </span
+          ><!--누르면 검색창 연결-->
+          <span class="material-symbols-outlined"> person </span>
+          <span class="material-symbols-outlined"> favorite </span>
+          <span class="material-symbols-outlined"> local_mall </span>
+        </div>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
+  <script>
+    const mainList = document.querySelectorAll('.mainList');
+    const dropMenu = document.querySelectorAll('.dropdownMenu');
+    const menSubList = document.querySelectorAll('.menSubli');
+    const womenSubList = document.querySelectorAll('.womenSubli');
+    const menRightSubList = document.querySelectorAll('.menRightList');
+    const womenRightSubList = document.querySelectorAll('.womenRightList');
+
+    for (let i=0;i<mainList.length; i++){    //이 코드 줄이는 방법!알아오기
+      mainList[i].addEventListener('mouseover',()=>{
+        dropMenu[i].style.visibility='visible';
+      })
+      mainList[i].addEventListener('mouseout',()=>{
+        dropMenu[i].style.visibility='hidden';
+      })
+    }
+
+    for(let i=0; i<menSubList.length; i++){    //이 코드 줄이는 방법!알아오기22
+      menSubList[i].addEventListener('mouseover',()=>{ 
+      menRightSubList[i].style.display='flex';
+      })
+      menSubList[i].addEventListener('mouseout',()=>{
+      menRightSubList[i].style.display='none';
+      })
+    }
+    for(let i=0;i<womenSubList.length; i++){
+      womenSubList[i].addEventListener('mouseover',()=>{ 
+      womenRightSubList[i].style.display='flex';
+      })
+      womenSubList[i].addEventListener('mouseout',()=>{ 
+      womenRightSubList[i].style.display='none';
+      })
+    }
+     
+  </script>
+</html>
