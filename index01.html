@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/project01.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="headerTop">
+        <ul>
+          <a href="#"><li>도움말</li></a>
+          <a href="#"><li>반품</li></a>
+          <a href="#"><li>배송 추적</li></a>
+          <a href="#"><li>아디클럽 가입하기</li></a>
+        </ul>
+      </div>
+      <div id="headerBottom">
+        <div id="logoImg"></div>
+        <nav>
+          <ul id="mainMenu">
+            <li class="mainList boldMenu">
+              <a href="#">MEN</a>
+              <div id="menDropdownMenu" class="dropdownMenu">
+                <ul id="menSubLeft">
+                  <p>MEN</p>
+                  <li class="menSubli">
+                    <a href="#">베스트셀러</a>
+                    <ul id="rightBest" class="menRightList">
+                      <li>베스트1</li>
+                      <li>베스트2</li>
+                      <li>베스트3</li>
+                      <li>베스트4</li>
+                    </ul>
+                  </li>
+                  <li class="menSubli">
+                    <a href="#">신상품</a>
+                    <ul id="rightNew" class="menRightList">
+                      <li>신상1</li>
+                      <li>신상2</li>
+                      <li>신상3</li>
+                      <li>신상4</li>
+                    </ul>
+                  </li>
+                  <li class="menSubli">
+                    <a href="#">신발</a>
+                    <ul id="rightShoe" class="menRightList">
+                      <li>오리지널스</li>
+                      <li>스포츠웨어</li>
+                      <li>슬리퍼·샌들</li>
+                      <li>8만원 이하 제품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="menSubli">
+                    <a href="#">의류</a>
+                    <ul id="rightCloth" class="menRightList">
+                      <li>자켓</li>
+                      <li>후디·스웨트셔츠</li>
+                      <li>트랙수트</li>
+                      <li>티셔츠</li>
+                      <li>팬츠</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="menSubli">
+                    <a href="#">용품</a>
+                    <ul id="rightAcc" class="menRightList">
+                      <li>모자</li>
+                      <li>가방</li>
+                      <li>양말</li>
+                      <li>헤드폰</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList boldMenu">
+              <a href="#">WOMEN </a>
+              <div id="womenDropdownMenu" class="dropdownMenu">
+                <ul id="womenSubLeft">
+                  <p>WOMEN</p>
+                  <li class="womenSubli">
+                    <a href="#">베스트셀러</a>
+                    <ul id="rightBest" class="womenRightList">
+                      <li>베스트1</li>
+                      <li>베스트2</li>
+                      <li>베스트3</li>
+                      <li>베스트4</li>
+                    </ul>
+                  </li>
+                  <li class="womenSubli">
+                    <a href="#">신상품</a>
+                    <ul id="rightNew" class="womenRightList">
+                      <li>신상1</li>
+                      <li>신상2</li>
+                      <li>신상3</li>
+                      <li>신상4</li>
+                    </ul>
+                  </li>
+                  <li class="womenSubli">
+                    <a href="#">신발</a>
+                    <ul id="rightShoe" class="womenRightList">
+                      <li>오리지널스</li>
+                      <li>스포츠웨어</li>
+                      <li>슬리퍼/샌들</li>
+                      <li>8만원 이하 제품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="womenSubli">
+                    <a href="#">의류</a>
+                    <ul id="rightCloth" class="womenRightList">
+                      <li>자켓</li>
+                      <li>후디·스웨트셔츠</li>
+                      <li>트랙수트</li>
+                      <li>티셔츠</li>
+                      <li>스포츠브라</li>
+                      <li>팬츠</li>
+                      <li>레깅스</li>
+                      <li>스커트</li>
+                      <li>원피스</li>
+                    </ul>
+                  </li>
+                  <li class="womenSubli">
+                    <a href="#">용품</a>
+                    <ul id="rightAcc" class="womenRightList">
+                      <li>모자</li>
+                      <li>가방</li>
+                      <li>양말</li>
+                      <li>헤드폰</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                        <li>
+                          <img src="https://placehold.it/350x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList boldMenu">
+              <a href="#">KIDS</a>
+              <div id="kidsDropdownMenu" class="dropdownMenu">
+                <ul id="kidsSubLeft">
+                  <p>KIDS</p>
+                  <li class="kidsSubli">
+                    <a href="#">베스트셀러</a>
+                    <ul id="rightBest" class="kidsRightList">
+                      <li>베스트1</li>
+                      <li>베스트2</li>
+                    </ul>
+                  </li>
+                  <li class="kidsSubli">
+                    <a href="#">신상품</a>
+                    <ul id="rightNew" class="kidsRightList">
+                      <li>신상1</li>
+                      <li>신상2</li>
+                    </ul>
+                  </li>
+                  <li class="kidsSubli">
+                    <a href="#">신발</a>
+                    <ul id="rightShoe" class="kidsRightList">
+                      <li>인펀트(110-160mm)</li>
+                      <li>키즈(170-210mm)</li>
+                      <li>주니어(220-245mm)</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="kidsSubli">
+                    <a href="#">의류</a>
+                    <ul id="rightCloth" class="kidsRightList">
+                      <li>상의</li>
+                      <li>하의</li>
+                      <li>트랙수트</li>
+                      <li>원피스</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="kidsSubli">
+                    <a href="#">용품</a>
+                    <ul id="rightAcc" class="kidsRightList">
+                      <li>가방</li>
+                      <li>모자</li>
+                      <li>양말</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList">
+              <a href="#">SPORTS</a>
+              <div id="sportsDropdownMenu" class="dropdownMenu">
+                <ul id="sportsSubLeft">
+                  <p>SPORTS</p>
+                  <li class="sportsSubli">
+                    <a href="#">모든 스포츠</a>
+                    <ul id="sportsAll" class="sportsRightList">
+                      <li>러닝</li>
+                      <li>트레이닝</li>
+                      <li>아웃도어</li>
+                      <li>골프</li>
+                      <li>테니스</li>
+                      <li>스케이트보딩</li>
+                      <li>사이클링</li>
+                      <li>축구</li>
+                      <li>농구</li>
+                      <li>요가</li>
+                      <li>수영</li>
+                    </ul>
+                  </li>
+                  <li class="sportsSubli">
+                    <a href="#">축구</a>
+                    <ul id="rightNew" class="sportsRightList">
+                      <li>축구 베스트셀러</li>
+                      <li>신발</li>
+                      <li>의류</li>
+                      <li>용품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="sportsSubli">
+                    <a href="#">농구</a>
+                    <ul id="rightShoe" class="sportsRightList">
+                      <li>농구 베스트셀러</li>
+                      <li>신발</li>
+                      <li>의류</li>
+                      <li>용품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="sportsSubli">
+                    <a href="#">요가</a>
+                    <ul id="rightCloth" class="sportsRightList">
+                      <li>요가 베스트셀러</li>
+                      <li>신발</li>
+                      <li>의류</li>
+                      <li>용품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                  <li class="sportsSubli">
+                    <a href="#">수영</a>
+                    <ul id="rightAcc" class="sportsRightList">
+                      <li>수영 베스트셀러</li>
+                      <li>신발</li>
+                      <li>의류</li>
+                      <li>용품</li>
+                      <ul class="img2Box">
+                        <li>
+                          <img src="https://placehold.it/700x350" alt="" />
+                        </li>
+                      </ul>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList">
+              <a href="#">BRANDS</a>
+              <div id="brandsDropdownMenu" class="dropdownMenu">
+                <ul id="brandsSubLeft">
+                  <p>BRANDS</p>
+                  <li class="brandsSubli">
+                    <a href="#">Y-3</a>
+                    <ul id="rightBest" class="brandsRightList">
+                      <li>Y-31</li>
+                      <li>Y-32</li>
+                    </ul>
+                  </li>
+                  <li class="brandsSubli">
+                    <a href="#">Stella mccartney</a>
+                    <ul id="rightNew" class="brandsRightList">
+                      <img
+                        src="https://placehold.it/1000x350"
+                        alt="StellaMccartneyBanner"
+                      />
+                      <!-- <li>Stella mccartney1</li>
+                      <li>Stella mccartney2</li> -->
+                    </ul>
+                  </li>
+                  <li class="brandsSubli">
+                    <a href="#">Terrex</a>
+                    <ul id="rightShoe" class="brandsRightList">
+                      <img
+                        src="https://placehold.it/1000x350"
+                        alt="TerrexBanner"
+                      />
+                    </ul>
+                  </li>
+                  <li class="brandsSubli">
+                    <a href="#">End Plastic Waste</a>
+                    <ul id="rightCloth" class="brandsRightList">
+                      <li>PrimeBlue</li>
+                      <li>PrimeGreen</li>
+                      <li>Vegan</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="mainList boldMenu">
+              <a href="#">ONLINE OUTLET</a>
+              <div id="outletDropdownMenu" class="dropdownMenu">
+                <ul id="outletSubLeft">
+                  <p>OUTLET</p>
+                  <li class="outletSubli">
+                    <a href="#">30% 미만</a>
+                    <ul id="rightBest" class="outletRightList">
+                      <img
+                        src="https://placehold.it/1000x350"
+                        alt="outletBigBanner"
+                      />
+                    </ul>
+                  </li>
+                  <li class="outletSubli">
+                    <a href="#">30% ~ 50%</a>
+                  </li>
+                  <li class="outletSubli">
+                    <a href="#">50% 이상</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div id="iconMenu">
+          <span class="material-symbols-outlined"> search </span>
+          <!--누르면 검색창 연결-->
+          <span class="material-symbols-outlined"> person </span>
+          <span class="material-symbols-outlined"> favorite </span>
+          <span class="material-symbols-outlined"> local_mall </span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="container">
+        <div id="fullPageSlider">
+          <!--풀페이지화보넣기-->
+        </div>
+        <div id="bestSeller">
+          <div id="bestSellerLeft">
+            <!--리디자인 화보 넣기-->
+          </div>
+          <div id="bestSellerRight">
+            <div id="bestText">
+              <h1>정상이 어디든, 지금</h1>
+              <p>
+                아디다스 TERREX 제품은 변화무쌍한 자연을 오롯이 즐길 수 있도록
+                도전에 필요한 모든 것을 지지합니다.<br />
+                언제라도 모험을 떠날 수 있도록 준비된 실용적인 레이어링
+                아이템.<br />
+                4가지 레이어의 완벽한 시너지 효과를 경험해 보세요.
+              </p>
+              <span>전체 제품 보기 →</span>
+            </div>
+            <div id="bestItems">
+              <span class="material-symbols-outlined">
+                chevron_left
+                </span>
+              <div id="itemsBox">
+                <!--item 두개씩 들어가기-->
+              </div>
+              <span class="material-symbols-outlined">
+                chevron_right
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+  <script src="js/project01.js"></script>
+</html>
