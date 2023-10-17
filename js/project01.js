@@ -15,6 +15,19 @@ const kidsRightSubList = document.querySelectorAll(".kidsRightList");
 const sportsRightSubList = document.querySelectorAll(".sportsRightList");
 const brandsRightSubList = document.querySelectorAll(".brandsRightList");
 
+const rightNewImgBox = document.querySelectorAll('.rightNewImgBox');
+const rightNewTextBox = document.querySelectorAll('.rightNewTextBox');
+
+for(let i=0; i<rightNewImgBox.length;i++){
+  rightNewImgBox[i].addEventListener('mouseenter',()=>{
+    rightNewTextBox[i].style.transform='translateX(200px)'
+    // rightNewTextBox[i].style.visibility='visible';
+  })
+  rightNewImgBox[i].addEventListener('mouseout',()=>{
+    rightNewTextBox[i].style.transform='translateX(0px)'
+    // rightNewTextBox[i].style.visibility='hidden';
+  })
+}
 //드롭다운 메뉴 제어, 이 코드 줄이는 방법!알아오기
 for (let i = 0; i < mainList.length; i++) {
   mainList[i].addEventListener("mouseover", () => {
@@ -76,4 +89,6 @@ for (let i = 0; i < brandsSubList.length; i++) {
       brandsRightSubList[0].style.display = "flex";
     });
   }
+
+
   //드롭다운 script 끝//
