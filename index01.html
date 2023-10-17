@@ -22,6 +22,23 @@
     />
   </head>
   <body>
+    <dialog id="adiClub">
+      <h2><span>아디클럽</span>에 가입하고
+        <br>10% 할인혜택을 바로 받아요!</h2>
+      <p>5만원 이상 무료배송, 익스클루시브, 멤버십 할인 혜택 등 <br>
+        많은 혜택이 기다리고 있어요.</p>
+      <form method="dialog">
+        <input type="email" placeholder="* 이메일을 입력하세요">
+        <p><input type="checkbox" name="agreeEmail"> <label for="agreeEmail">이메일로 가장 빠르게 소식을 받아보시겠어요?</label></p>
+        <p>* 언제든지 "구독 취소하기"를 통해 뉴스레터 구독을 취소 하실 수 있습니다.<br> 더 궁금한 사항은 <span>개인정보 취급방침</span>을 참조해 주시길 바랍니다. </p>
+          <button value="confirm">
+              <p>가입하기</p>
+          </button>
+          <button value="close">
+              <p>다음에 할게요</p>
+          </button>
+      </form>
+  </dialog>
     <header>
       <div id="headerTop">
         <ul>
@@ -32,7 +49,7 @@
         </ul>
       </div>
       <div id="headerBottom">
-        <div id="logoImg"></div>
+        <div id="logoImg"><img src="img/Adidas_Logo.png" alt=""></div>
         <nav>
           <ul id="mainMenu">
             <li class="mainList boldMenu">
@@ -46,7 +63,6 @@
                       <li>베스트1</li>
                       <li>베스트2</li>
                       <li>베스트3</li>
-                      <li>베스트4</li>
                     </ul>
                   </li>
                   <li class="menSubli">
@@ -55,7 +71,6 @@
                       <li>신상1</li>
                       <li>신상2</li>
                       <li>신상3</li>
-                      <li>신상4</li>
                     </ul>
                   </li>
                   <li class="menSubli">
@@ -124,7 +139,6 @@
                       <li>베스트1</li>
                       <li>베스트2</li>
                       <li>베스트3</li>
-                      <li>베스트4</li>
                     </ul>
                   </li>
                   <li class="womenSubli">
@@ -133,7 +147,6 @@
                       <li>신상1</li>
                       <li>신상2</li>
                       <li>신상3</li>
-                      <li>신상4</li>
                     </ul>
                   </li>
                   <li class="womenSubli">
@@ -344,26 +357,34 @@
                   <li class="brandsSubli">
                     <a href="#">Y-3</a>
                     <ul id="rightBest" class="brandsRightList">
-                      <li>Y-31</li>
-                      <li>Y-32</li>
+                      <li>Y-31
+                        <img src="" alt="">
+                      </li>
+                      <li>Y-32
+                        <img src="" alt="">
+                      </li>
                     </ul>
                   </li>
                   <li class="brandsSubli">
                     <a href="#">Stella mccartney</a>
                     <ul id="rightNew" class="brandsRightList">
+                      <li>
                       <img
                         src="img/adidas-stellamccartney-1000x350.jpg"
                         alt="StellaMccartneyBanner"
                       />
+                    </li>
                     </ul>
                   </li>
                   <li class="brandsSubli">
                     <a href="#">Terrex</a>
                     <ul id="rightShoe" class="brandsRightList">
+                      <li>
                       <img
                         src="img/adidas-terrex-700x350.jpg"
                         alt="TerrexBanner"
                       />
+                    </li>
                     </ul>
                   </li>
                   <li class="brandsSubli">
@@ -385,10 +406,10 @@
                   <li class="outletSubli">
                     <a href="#">30% 미만</a>
                     <ul id="rightBest" class="outletRightList">
-                      <img
+                      <li><img
                         src="img/adidas-outlet-1000x350.jpg"
                         alt="outletBigBanner"
-                      />
+                      /></li>
                     </ul>
                   </li>
                   <li class="outletSubli">
@@ -437,7 +458,12 @@
                 chevron_left
                 </span>
               <div id="itemsBox">
-                <!--item 두개씩 들어가기-->
+                <div class="terrexItems">
+                  <div id="임시이름"></div>
+                </div> <!--이미지 넣고 hover시 bottom에서 1/3크기 탭 올라옴(item 이름, 가격)-->
+                <div class="terrexItems"></div>
+                <div class="terrexItems"></div>
+                <div class="terrexItems"></div>
               </div>
               <span class="material-symbols-outlined">
                 chevron_right

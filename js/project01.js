@@ -1,3 +1,8 @@
+//Modal
+const modal = document.querySelector('#adiClub');
+
+modal.showModal();
+//Menu 
 const mainList = document.querySelectorAll(".mainList");
 const dropMenu = document.querySelectorAll(".dropdownMenu");
 
