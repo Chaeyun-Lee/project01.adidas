@@ -29,7 +29,7 @@
         많은 혜택이 기다리고 있어요.</p>
       <form method="dialog">
         <input type="email" placeholder="* 이메일을 입력하세요">
-        <p><input type="checkbox" name="agreeEmail"> <label for="agreeEmail">이메일로 가장 빠르게 소식을 받아보시겠어요?</label></p>
+        <p><label for="agreeEmail"><input type="checkbox" id="agreeEmail"> 이메일로 가장 빠르게 소식을 받아보시겠어요?</label></p>
         <p>* 언제든지 "구독 취소하기"를 통해 뉴스레터 구독을 취소 하실 수 있습니다.<br> 더 궁금한 사항은 <span>개인정보 취급방침</span>을 참조해 주시길 바랍니다. </p>
           <button value="confirm">
               <p>가입하기</p>
@@ -60,17 +60,82 @@
                   <li class="menSubli">
                     <a href="#">베스트셀러</a>
                     <ul id="rightBest" class="menRightList">
-                      <li>베스트1</li>
-                      <li>베스트2</li>
-                      <li>베스트3</li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-men-shoe-spezial-1.jpg" alt="">
+                        <img src="img/adidas-men-shoe-spezial-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>HANDBALL SPEZIAL SHOES</p>
+                          <p>Men originals</p>
+                          <p>3 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Navy</li>
+                          <li>Sky blue</li>
+                          <li>Black</li>
+                        </ul>
+                      </div></li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-men-Bestcloth-1.jpg" alt="">
+                        <img src="img/adidas-men-Bestcloth-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>HACK 럭비 긴팔 티</p>
+                          <p>Men originals</p>
+                          <p>3 colors</p>
+                          <p>99,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Black</li>
+                          <li>Yellow</li>
+                          <li>Blue</li>
+                        </ul>
+                      </div></li>
                     </ul>
                   </li>
                   <li class="menSubli">
                     <a href="#">신상품</a>
                     <ul id="rightNew" class="menRightList">
-                      <li>신상1</li>
-                      <li>신상2</li>
-                      <li>신상3</li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-men-newcloth-1.jpg" alt="">
+                        <img src="img/adidas-men-newcloth-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>BB TRACKTOP</p>
+                          <p>Unisex Lifestyle</p>
+                          <p>2 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Green</li>
+                          <li>Maroon</li>
+                        </ul>
+                      </div></li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-men-newshoe-bermuda1.jpg" alt="">
+                        <img src="img/adidas-men-newshoe-bermuda2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>버뮤다</p>
+                          <p>Men originals</p>
+                          <p>3 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Pink</li>
+                          <li>Blue</li>
+                          <li>Cream</li>
+                        </ul>
+                      </div></li>
                     </ul>
                   </li>
                   <li class="menSubli">
@@ -136,17 +201,82 @@
                   <li class="womenSubli">
                     <a href="#">베스트셀러</a>
                     <ul id="rightBest" class="womenRightList">
-                      <li>베스트1</li>
-                      <li>베스트2</li>
-                      <li>베스트3</li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-women-bestcloth-1.jpg" alt="">
+                        <img src="img/adidas-women-bestcloth-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>아디컬러 NEUCLASSICS 트랙 재킷</p>
+                          <p>Unisex Lifestyle</p>
+                          <p>3 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Cream</li>
+                          <li>Black</li>
+                          <li>Purple</li>
+                        </ul>
+                      </div></li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-women-bestshoe-gazelle-1.jpg" alt="">
+                        <img src="img/adidas-women-bestshoe-gazelle-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>가젤 볼드</p>
+                          <p>Women originals</p>
+                          <p>5 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Grey</li>
+                          <li>Black</li>
+                          <li>Red</li>
+                          <li>Skyblue</li>
+                          <li>Green</li>
+                        </ul>
+                      </div></li>
                     </ul>
                   </li>
                   <li class="womenSubli">
                     <a href="#">신상품</a>
                     <ul id="rightNew" class="womenRightList">
-                      <li>신상1</li>
-                      <li>신상2</li>
-                      <li>신상3</li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-women-newshoe-1.jpg" alt="">
+                        <img src="img/adidas-women-newshoe-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>레이서 TR23</p>
+                          <p>Women sportswear</p>
+                          <p>1 color</p>
+                          <p>95,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>White</li>
+                        </ul>
+                      </div></li>
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-women-newshoe-superstar-1.jpg" alt="">
+                        <img src="img/adidas-women-newshoe-superstar-2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>슈퍼스타 XLG</p>
+                          <p>Women originals</p>
+                          <p>2 colors</p>
+                          <p>139,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Black</li>
+                          <li>Green</li>
+                        </ul>
+                      </div></li>
                     </ul>
                   </li>
                   <li class="womenSubli">
@@ -208,22 +338,80 @@
                   <li class="kidsSubli">
                     <a href="#">베스트셀러</a>
                     <ul id="rightBest" class="kidsRightList">
-                      <li>베스트1</li>
-                      <li>베스트2</li>
-                    </ul>
-                  </li>
-                  <li class="kidsSubli">
-                    <a href="#">신상품</a>
-                    <ul id="rightNew" class="kidsRightList">
-                      <li><div class="rightNewImgBox"><img src="img/adidas-kids-shoe-puppyret360-cream1.jpg" alt=""></div>
-                        <div class="rightNewTextBox">
+                      <li><div class="rightBestImgBox rightImgBox"><img src="img/adidas-kids-samba-white1.jpg" alt="">
+                        <img src="img/adidas-kids-samba-white2.jpg" alt="">
+                      </div>
+                        <div class="rightBestTextBox rightTextBox">
+                          <p>삼바 OG</p>
+                          <p>Infants originals</p>
+                          <p>2 colors</p>
+                          <p>69,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Black</li>
+                          <li>Cream</li>
+                        </ul>
+                      </div></li>
+                      <li>
+                        <div class="rightBestImgBox rightImgBox"><img src="img/adidas-kids-shoe-puppyret360-cream1.jpg" alt="">
+                        <img src="img/adidas-kids-shoe-puppyret360-cream2.jpg" alt=""></div>
+                        <div class="rightBestTextBox rightTextBox">
                           <p>퍼피렛 360</p>
                           <p>Infants originals</p>
                           <p>3 colors</p>
                           <p>55,000원</p>
                           <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Black</li>
+                          <li>Cream</li>
+                          <li>Khaki</li>
+                        </ul>
+                      </div></li>
+                      
+                    </ul>
+                  </li>
+                  <li class="kidsSubli">
+                    <a href="#">신상품</a>
+                    <ul id="rightNew" class="kidsRightList">
+                      <li><div class="rightNewImgBox rightImgBox"><img src="img/adidas-kids-shoe-grandcourtchip-1.jpg" alt="">
+                        <img src="img/adidas-kids-shoe-grandcourtchip-2.jpg" alt="">
+                      </div>
+                        <div class="rightNewTextBox rightTextBox">
+                          <p>그랜드 코트 칩 CF I</p>
+                          <p>Kids sportswear</p>
+                          <p>1 color</p>
+                          <p>55,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                      <div class="toggleTextBox" id="toggle1">
+                        <p>구입 가능한 색상</p>
+                        <ul>
+                          <li>Brown</li>
+                        </ul>
+                      </div></li>
+                      <li><div class="rightNewImgBox rightImgBox"><img src="img/adidas-kids-shoe-superstar360-1.jpg" alt="">
+                        <img src="img/adidas-kids-shoe-superstar360-2.jpg" alt=""></div>
+                        <div class="rightNewTextBox rightTextBox">
+                          <p>슈퍼스타 360 부츠</p>
+                          <p>Kids Lifestyle</p>
+                          <p>3 colors</p>
+                          <p>99,000원</p>
+                          <button>자세히 →</button>
+                        </div>
+                        <div class="toggleTextBox">
+                          <p>구입 가능한 색상</p>
+                          <ul>
+                            <li>Black</li>
+                            <li>Pink</li>
+                            <li>Green</li>
+                          </ul>
                         </div></li>
-                      <li>신상2</li>
                     </ul>
                   </li>
                   <li class="kidsSubli">
@@ -313,7 +501,7 @@
                       <li>용품</li>
                       <ul class="img2Box">
                         <li>
-                          <img src="img/adidasRivalry700x350.jpg" alt="" />
+                          <img src="img/adidas-basketball-700x350.jpg" alt="" />
                         </li>
                       </ul>
                     </ul>
@@ -390,9 +578,27 @@
                   <li class="brandsSubli">
                     <a href="#">End Plastic Waste</a>
                     <ul id="rightCloth" class="brandsRightList">
-                      <li>PrimeBlue</li>
-                      <li>PrimeGreen</li>
-                      <li>Vegan</li>
+                      <li><div class="rightClothImgBox rightImgBox"><img src="img/adidas-primeblue1.jpg" alt="">
+                      </div>
+                      <div class="toggleTextBox">
+                        <p>PrimeBlue</p>
+                        <p>더 나은 선택으로 해양을 깨끗하게.</p>
+                        <button>모든 제품 보기 →</button>
+                      </div></li>
+                      <li><div class="rightClothImgBox rightImgBox"><img src="img/adidas-primegreen.png" alt="">
+                      </div>
+                      <div class="toggleTextBox">
+                        <p>PrimeGreen</p>
+                        <p>리사이클 소재만을 사용합니다.</p>
+                        <button>모든 제품 보기 →</button>
+                      </div></li>
+                      <li><div class="rightClothImgBox rightImgBox"><img src="img/adidas-vegan2.jpg" alt="">
+                      </div>
+                      <div class="toggleTextBox">
+                        <p>Vegan</p>
+                        <p>식물성 소재만을 사용합니다.</p>
+                        <button>모든 제품 보기 →</button>
+                      </div></li>
                     </ul>
                   </li>
                 </ul>

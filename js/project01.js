@@ -2,6 +2,17 @@
 const modal = document.querySelector('#adiClub');
 
 modal.showModal();
+window.addEventListener('scroll',()=>{
+  
+  const topMenu = document.querySelector('#headerBottom')
+  if(window.scrollY>10){
+    topMenu.style.position='fixed';
+    topMenu.style.top='0'
+    topMenu.style.backgroundColor='#ffffff'
+  } else {topMenu.style.position='relative';
+
+  }
+})
 //Menu 
 const mainList = document.querySelectorAll(".mainList");
 const dropMenu = document.querySelectorAll(".dropdownMenu");
@@ -20,19 +31,113 @@ const kidsRightSubList = document.querySelectorAll(".kidsRightList");
 const sportsRightSubList = document.querySelectorAll(".sportsRightList");
 const brandsRightSubList = document.querySelectorAll(".brandsRightList");
 
-const rightNewImgBox = document.querySelectorAll('.rightNewImgBox');
-const rightNewTextBox = document.querySelectorAll('.rightNewTextBox');
+//toggle용 
+const menRightBestLi = document.querySelectorAll(".menSubli #rightBest>li");
+const menRightNewLi = document.querySelectorAll(".menSubli #rightNew>li");
+const womenRightBestLi = document.querySelectorAll(".womenSubli #rightBest>li");
+const womenRightNewLi = document.querySelectorAll(".womenSubli #rightNew>li");
+const kidsRightBestLi = document.querySelectorAll(".kidsSubli #rightBest>li");
+const kidsRightNewLi = document.querySelectorAll(".kidsSubli #rightNew>li");
 
-for(let i=0; i<rightNewImgBox.length;i++){
-  rightNewImgBox[i].addEventListener('mouseenter',()=>{
-    rightNewTextBox[i].style.transform='translateX(200px)'
-    // rightNewTextBox[i].style.visibility='visible';
+//Men 베스트셀러, 신상 카테고리 Hover 시 Toggle 이벤트
+for(let i=0; i<menRightBestLi.length;i++){
+  let toggleTextBox  = menRightBestLi[i].querySelector('.toggleTextBox');
+  let rightImgBox  = menRightBestLi[i].querySelector('.rightImgBox');
+
+  menRightBestLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)'
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
   })
-  rightNewImgBox[i].addEventListener('mouseout',()=>{
-    rightNewTextBox[i].style.transform='translateX(0px)'
-    // rightNewTextBox[i].style.visibility='hidden';
+  menRightBestLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)'
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
   })
 }
+
+for(let i=0; i<menRightNewLi.length;i++){
+  let toggleTextBox = menRightNewLi[i].querySelector('.toggleTextBox');
+  let rightImgBox = menRightNewLi[i].querySelector('.rightImgBox');
+
+  menRightNewLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)';
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
+  })
+  menRightNewLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)';
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
+  })
+}
+
+//Women 베스트셀러, 신상 카테고리 Hover 시 Toggle 이벤트
+for(let i=0; i<womenRightBestLi.length;i++){
+  let toggleTextBox  = womenRightBestLi[i].querySelector('.toggleTextBox');
+  let rightImgBox  = womenRightBestLi[i].querySelector('.rightImgBox');
+
+  womenRightBestLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)'
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
+  })
+  womenRightBestLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)'
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
+  })
+}
+
+for(let i=0; i<womenRightNewLi.length;i++){
+  let toggleTextBox = womenRightNewLi[i].querySelector('.toggleTextBox');
+  let rightImgBox = womenRightNewLi[i].querySelector('.rightImgBox');
+
+  womenRightNewLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)';
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
+  })
+  womenRightNewLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)';
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
+  })
+}
+
+//Kids 베스트셀러, 신상 카테고리 Hover 시 Toggle 이벤트
+for(let i=0; i<kidsRightBestLi.length;i++){
+  let toggleTextBox  = kidsRightBestLi[i].querySelector('.toggleTextBox');
+  let rightImgBox  = kidsRightBestLi[i].querySelector('.rightImgBox');
+
+  kidsRightBestLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)'
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
+  })
+  kidsRightBestLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)'
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
+  })
+}
+
+for(let i=0; i<kidsRightNewLi.length;i++){
+  let toggleTextBox = kidsRightNewLi[i].querySelector('.toggleTextBox');
+  let rightImgBox = kidsRightNewLi[i].querySelector('.rightImgBox');
+
+  kidsRightNewLi[i].addEventListener('mouseover',()=>{
+    toggleTextBox.style.transform='translateY(-50%)';
+    toggleTextBox.style.opacity='1';
+    rightImgBox.children[1].style.visibility='visible';
+  })
+  kidsRightNewLi[i].addEventListener('mouseout',()=>{
+    toggleTextBox.style.transform='translateY(0%)';
+    toggleTextBox.style.opacity='0';
+    rightImgBox.children[1].style.visibility='hidden';
+  })
+}
+
 //드롭다운 메뉴 제어, 이 코드 줄이는 방법!알아오기
 for (let i = 0; i < mainList.length; i++) {
   mainList[i].addEventListener("mouseover", () => {
@@ -42,7 +147,6 @@ for (let i = 0; i < mainList.length; i++) {
     dropMenu[i].style.visibility = "hidden";
   });
 }
-
 //드롭다운 서브메뉴 제어 , 이 코드 줄이는 방법!알아오기22
 for (let i = 0; i < menSubList.length; i++) {
   menSubList[i].addEventListener("mouseover", () => {

@@ -3,10 +3,20 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "IBM Plex Sans KR", sans-serif;
-  
 }
 body{
   overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background-color: #151515ad;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 25px;
+  background-color: #ebebeb;
 }
 a {
   text-decoration: none;
@@ -275,11 +285,79 @@ nav {
 .img2Box > li {
   display: inline-block;
 }
+.rightImgBox{
+  width:70%;
+  overflow: hidden;
+  text-align: left;
+  height:100%;
+  position:relative;
+}
+.rightImgBox>img{
+  width:100%;
+}
+.rightImgBox>img:last-child{
+  width:100%;
+  height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  visibility: hidden;
+}
+.rightTextBox{
+  width:30%;
+  height:100%;
+  padding:50px 30px;
+  background-color: #ffffff;
+}
+.rightTextBox p:first-child{
+  font-weight:600;
+  font-size:22px;
+  margin:30px 0px;
+}
+.rightTextBox button{
+  width:70%;
+  padding:5px;
+  font-size: 14px;
+  border: none;
+  border-bottom:2px solid black;
+  background-color: none;
+  margin:30px 0px;
+  cursor: pointer;
+}
+.toggleTextBox{
+  background-color:#0000005e;
+  color:#ffffff;
+  width:100%;
+  height:20%;
+  position:absolute;
+  bottom:-10%;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.toggleTextBox p{
+  margin:5px 0px;
+}
+.toggleTextBox>ul>li{
+  display: inline-block;
+  border: 1px solid rgb(255, 255, 255);
+  width:80px;
+  padding:5px;
+  cursor: pointer;
+}
+.toggleTextBox>ul>li:hover{
+  background-color: #00000056;
+  border:none;
+}
 /*드롭다운 기본 CSS 끝*/
 /*Men 카테고리 시작*/
 .menSubli #rightBest > li,
 .menSubli #rightNew > li{
-  width:35%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  overflow: hidden;
+  position:relative;
 }
 .menSubli > #rightShoe,
 .menSubli > #rightCloth,
@@ -317,10 +395,18 @@ nav {
 .menSubli .img2Box>li>img{
   width:100%;
 }
+.rightImgBox>img{
+  height:100%;
+}
 /*Women 카테고리 시작*/
 .womenSubli #rightBest > li,
 .womenSubli #rightNew > li{
-  width:35%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  overflow: hidden;
+  position:relative;
 }
 .womenSubli > #rightShoe,
 .womenSubli > #rightAcc {
@@ -376,9 +462,7 @@ nav {
   width:100%;
 }
 /*Kids 카테고리 시작*/
-.kidsSubli > #rightNew li{
-  position:relative;
-}
+
 .kidsSubli > #rightShoe,
 .kidsSubli > #rightCloth,
 .kidsSubli > #rightAcc {
@@ -402,7 +486,12 @@ nav {
 }
 .kidsSubli #rightBest > li,
 .kidsSubli #rightNew > li {
-  width: 40%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  overflow: hidden;
+  position:relative;
 }
 .kidsSubli #rightShoe > li:hover,
 .kidsSubli #rightCloth > li:hover,
@@ -419,38 +508,7 @@ nav {
 .kidsSubli .img2Box>li>img{
   width:100%;
 }
-.rightNewImgBox{
-  overflow: hidden;
-  text-align: left;
-  height:100%;
-}
-.rightNewImgBox>img{
-  width:75%;
-}
-.rightNewTextBox{
-  width:40%;
-  height:100%;
-  padding:50px 30px;
-  background-color: #e29d9d6b;
-  position:absolute;
-  top:0;
-  right:25%;
-  transition: 0.3s;
-}
-.rightNewTextBox p:first-child{
-  font-weight:600;
-  font-size:24px;
-  margin:30px 0px;
-}
-.rightNewTextBox button{
-  width:60%;
-  padding:5px;
-  font-size: 14px;
-  border: none;
-  border-bottom:2px solid black;
-  background-color: none;
-  margin:30px 0px;
-}
+
 /*Sports 카테고리 시작*/
 #sportsAll {
   padding-top: 70px;
@@ -522,6 +580,7 @@ nav {
 .brandsSubli #rightNew > li,
 .brandsSubli #rightShoe > li {
   width: 90%;
+  height:100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -529,10 +588,41 @@ nav {
 .brandsSubli #rightBest > li>img,
 .brandsSubli #rightNew > li>img,
 .brandsSubli #rightShoe > li>img{
-  width:100%;
+  height:100%;
+}
+.brandsSubli #rightCloth .rightImgBox {
+  width: 100%;
+}
+.brandsSubli #rightCloth .rightImgBox>img {
+  height:100%;
+  visibility: visible;
 }
 .brandsSubli #rightCloth > li {
   width: 70%;
+  position:relative;
+}
+.brandsRightList .toggleTextBox{
+  bottom:0;
+  width:100%;
+  opacity: 1;
+}
+.brandsRightList .toggleTextBox button{
+  width:30%;
+  padding:5px;
+  position:absolute;
+  top:-42%;
+  right:0;
+  border:none;
+  border-bottom:1px solid #ffffff;
+  background-color: #ffffff85;
+}
+.brandsRightList .toggleTextBox button:hover{
+  background-color: #00000060;
+  border-bottom:2px solid #000000;
+  color:white;
+}
+.brandsRightList .toggleTextBox>p:first-child{
+  font-size:20px;
 }
 /*outlet 카테고리 시작*/
 .outletSubli>#rightBest>li{
@@ -542,7 +632,7 @@ nav {
   align-items: center;
 }
 .outletSubli>#rightBest>li>img{
-  width:100%;
+  height:100%;
 }
 /*Header CSS 끝*/
 /*Main CSS 시작*/
