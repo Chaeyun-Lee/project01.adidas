@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "IBM Plex Sans KR", sans-serif;
 }
-body{
+body {
   overflow-x: hidden;
 }
 body::-webkit-scrollbar {
@@ -25,69 +25,67 @@ a {
 ul {
   list-style-type: none;
 }
-dialog{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  padding:30px;
-  width:500px;
-  height:600px;
+dialog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  width: 500px;
+  height: 600px;
   text-align: center;
   border: none;
 }
-dialog::backdrop{
+dialog::backdrop {
   background-color: #000000;
   opacity: 0.5;
 }
-#adiClub>h2>span{
+#adiClub > h2 > span {
   font-size: 36px;
   font-weight: 600;
 }
-#adiClub>h2{
-  margin:30px 0px;
+#adiClub > h2 {
+  margin: 30px 0px;
 }
-form>input{
-  width:60%;
-  padding:5px 10px;
-  border:1px solid #000000;
+form > input {
+  width: 60%;
+  padding: 5px 10px;
+  border: 1px solid #000000;
   border-radius: 0px;
-  margin:10px;
+  margin: 10px;
 }
-form>p:nth-child(2){
+form > p:nth-child(2) {
   font-size: 14px;
-
 }
-form>p:nth-child(3){
+form > p:nth-child(3) {
   font-size: 12px;
-  color:#ccc;
+  color: #ccc;
   margin: 20px 0px;
 }
-form>button:nth-child(4){
+form > button:nth-child(4) {
   display: inline-block;
-  padding:5px;
-  margin:20px auto;
-  width:60%;
-  color:#ffffff;
+  padding: 5px;
+  margin: 20px auto;
+  width: 60%;
+  color: #ffffff;
   background-color: #000000;
-  border:1px solid #000000;
+  border: 1px solid #000000;
 }
-form>button:nth-child(5){
-  display:inline-block;
-  padding:5px;
-  margin:0px auto;
-  width:60%;
-  color:#000000;
+form > button:nth-child(5) {
+  display: inline-block;
+  padding: 5px;
+  margin: 0px auto;
+  width: 60%;
+  color: #000000;
   background-color: #ffffff;
-  border:none;
+  border: none;
   text-decoration: underline;
 }
-form>button:hover{
-  cursor:pointer;
+form > button:hover {
+  cursor: pointer;
   background-color: #ffffff;
-  color:#000000;
-  font-weight:600;
-  
+  color: #000000;
+  font-weight: 600;
 }
 /*헤더 CSS 시작*/
 header {
@@ -98,6 +96,7 @@ header {
   width: 100vw;
   height: 30px;
   position: relative;
+  border-bottom: 1px solid #000000;
 }
 #headerTop > ul {
   position: absolute;
@@ -110,6 +109,7 @@ header {
 }
 #headerTop > ul > a:hover {
   font-weight: 600;
+  color:#007fc2;
 }
 #headerTop > ul > a > li {
   display: inline-block;
@@ -120,19 +120,17 @@ header {
 #headerBottom {
   width: 100vw;
   height: 70px;
-  border: 1px solid #000000;
+
   position: relative;
   display: flex;
 }
 #logoImg {
   flex: 1;
-  border: 1px solid #000000;
-  padding:0px 30px;
-  
+  padding: 0px 30px;
+  text-align: center;
 }
-#logoImg>img{
-  height:80%;
-  border: 1px solid black;
+#logoImg > img {
+  height: 100%;
 }
 nav {
   flex: 3;
@@ -143,7 +141,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000000;
 }
 #mainMenu > li {
   padding: 0px 15px;
@@ -161,25 +158,28 @@ nav {
 }
 #iconMenu {
   flex: 1;
-  border: 1px solid black;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 #iconMenu span {
   font-size: 32px;
+  cursor: pointer;
+}
+#iconMenu span:hover {
+  color: #007fc2;
 }
 /*드롭다운 메뉴 CSS*/
 .dropdownMenu {
   width: 100vw;
   height: 400px;
+  background-color: #ffffffd5;
+  display: flex;
+  visibility: hidden;
+  z-index: 100;
   position: absolute;
   top: 100%;
   left: 0%;
-  border: 1px solid #000000;
-  background-color:#ffffffd5;
-  display: flex;
-  visibility: hidden;
 }
 #menSubLeft,
 #womenSubLeft,
@@ -220,16 +220,16 @@ nav {
   width: 100%;
   padding: 10px 0px;
 }
-#menSubLeft > li >a,
-#womenSubLeft > li>a,
-#kidsSubLeft > li>a,
-#sportsSubLeft > li>a,
-#brandsSubLeft > li>a,
-#outletSubLeft > li>a {
-    display: block;
-    padding:10px 0px;
-    text-align: center;
-  }
+#menSubLeft > li > a,
+#womenSubLeft > li > a,
+#kidsSubLeft > li > a,
+#sportsSubLeft > li > a,
+#brandsSubLeft > li > a,
+#outletSubLeft > li > a {
+  display: block;
+  padding: 10px 0px;
+  text-align: center;
+}
 #menSubLeft > li:hover a,
 #womenSubLeft > li:hover a,
 #kidsSubLeft > li:hover a,
@@ -272,12 +272,10 @@ nav {
 #rightShoe > li,
 #rightCloth > li,
 #rightAcc > li {
-  border: 1px solid black;
   height: 100%;
   text-align: center;
 }
 .img2Box {
-  border: 1px solid black;
   width: 60%;
   display: flex;
   justify-content: space-around;
@@ -285,79 +283,79 @@ nav {
 .img2Box > li {
   display: inline-block;
 }
-.rightImgBox{
-  width:70%;
+.rightImgBox {
+  width: 70%;
   overflow: hidden;
   text-align: left;
-  height:100%;
-  position:relative;
+  height: 100%;
+  position: relative;
 }
-.rightImgBox>img{
-  width:100%;
+.rightImgBox > img {
+  width: 100%;
 }
-.rightImgBox>img:last-child{
-  width:100%;
-  height:100%;
+.rightImgBox > img:last-child {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   visibility: hidden;
 }
-.rightTextBox{
-  width:30%;
-  height:100%;
-  padding:50px 30px;
+.rightTextBox {
+  width: 30%;
+  height: 100%;
+  padding: 50px 30px;
   background-color: #ffffff;
 }
-.rightTextBox p:first-child{
-  font-weight:600;
-  font-size:22px;
-  margin:30px 0px;
+.rightTextBox p:first-child {
+  font-weight: 600;
+  font-size: 22px;
+  margin: 30px 0px;
 }
-.rightTextBox button{
-  width:70%;
-  padding:5px;
+.rightTextBox button {
+  width: 70%;
+  padding: 5px;
   font-size: 14px;
   border: none;
-  border-bottom:2px solid black;
+  border-bottom: 2px solid black;
   background-color: none;
-  margin:30px 0px;
+  margin: 30px 0px;
   cursor: pointer;
 }
-.toggleTextBox{
-  background-color:#0000005e;
-  color:#ffffff;
-  width:100%;
-  height:20%;
-  position:absolute;
-  bottom:-10%;
+.toggleTextBox {
+  background-color: #0000005e;
+  color: #ffffff;
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: -10%;
   transition: all 0.3s;
   opacity: 0;
 }
-.toggleTextBox p{
-  margin:5px 0px;
+.toggleTextBox p {
+  margin: 5px 0px;
 }
-.toggleTextBox>ul>li{
+.toggleTextBox > ul > li {
   display: inline-block;
   border: 1px solid rgb(255, 255, 255);
-  width:80px;
-  padding:5px;
+  width: 80px;
+  padding: 5px;
   cursor: pointer;
 }
-.toggleTextBox>ul>li:hover{
+.toggleTextBox > ul > li:hover {
   background-color: #00000056;
-  border:none;
+  border: none;
 }
 /*드롭다운 기본 CSS 끝*/
 /*Men 카테고리 시작*/
 .menSubli #rightBest > li,
-.menSubli #rightNew > li{
+.menSubli #rightNew > li {
   width: 45%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   overflow: hidden;
-  position:relative;
+  position: relative;
 }
 .menSubli > #rightShoe,
 .menSubli > #rightCloth,
@@ -386,27 +384,27 @@ nav {
   background-color: #ffffff96;
   font-weight: 600;
 }
-.menSubli .img2Box>li{
-  width:49%;
+.menSubli .img2Box > li {
+  width: 49%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.menSubli .img2Box>li>img{
-  width:100%;
+.menSubli .img2Box > li > img {
+  width: 100%;
 }
-.rightImgBox>img{
-  height:100%;
+.rightImgBox > img {
+  height: 100%;
 }
 /*Women 카테고리 시작*/
 .womenSubli #rightBest > li,
-.womenSubli #rightNew > li{
+.womenSubli #rightNew > li {
   width: 45%;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   overflow: hidden;
-  position:relative;
+  position: relative;
 }
 .womenSubli > #rightShoe,
 .womenSubli > #rightAcc {
@@ -452,17 +450,25 @@ nav {
   background-color: #ffffff96;
   font-weight: 600;
 }
-.womenSubli .img2Box>li{
-  width:49%;
+.womenSubli .img2Box > li {
+  width: 49%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.womenSubli .img2Box>li>img{
-  width:100%;
+.womenSubli .img2Box > li > img {
+  width: 100%;
 }
 /*Kids 카테고리 시작*/
-
+.kidsSubli #rightBest > li,
+.kidsSubli #rightNew > li {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
 .kidsSubli > #rightShoe,
 .kidsSubli > #rightCloth,
 .kidsSubli > #rightAcc {
@@ -484,31 +490,21 @@ nav {
   height: 50px;
   text-align: left;
 }
-.kidsSubli #rightBest > li,
-.kidsSubli #rightNew > li {
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  align-items:center;
-  overflow: hidden;
-  position:relative;
-}
 .kidsSubli #rightShoe > li:hover,
 .kidsSubli #rightCloth > li:hover,
 .kidsSubli #rightAcc > li:hover {
   background-color: #ffffff96;
   font-weight: 600;
 }
-.kidsSubli .img2Box>li{
-  width:90%;
+.kidsSubli .img2Box > li {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.kidsSubli .img2Box>li>img{
-  width:100%;
+.kidsSubli .img2Box > li > img {
+  width: 100%;
 }
-
 /*Sports 카테고리 시작*/
 #sportsAll {
   padding-top: 70px;
@@ -559,170 +555,273 @@ nav {
   background-color: #ebebeb;
   font-weight: 600;
 }
-
-.sportsSubli .img2Box>li {
-  width:90%;
+.sportsSubli .img2Box > li {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-.sportsSubli .img2Box>li>img{
-  width:100%;
+.sportsSubli .img2Box > li > img {
+  width: 100%;
 }
 /*Brands 카테고리 시작*/
 .brandsSubli #rightBest > li {
   width: 40%;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .brandsSubli #rightNew > li,
 .brandsSubli #rightShoe > li {
   width: 90%;
-  height:100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.brandsSubli #rightBest > li>img,
-.brandsSubli #rightNew > li>img,
-.brandsSubli #rightShoe > li>img{
-  height:100%;
-}
-.brandsSubli #rightCloth .rightImgBox {
-  width: 100%;
-}
-.brandsSubli #rightCloth .rightImgBox>img {
-  height:100%;
-  visibility: visible;
+.brandsSubli #rightBest > li > img,
+.brandsSubli #rightNew > li > img,
+.brandsSubli #rightShoe > li > img {
+  height: 100%;
 }
 .brandsSubli #rightCloth > li {
-  width: 70%;
-  position:relative;
+  width: 32%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.brandsRightList .toggleTextBox{
-  bottom:0;
-  width:100%;
+.brandsSubli .rightImgBox {
+  width: 100%;
+  height: 100%;
+}
+.brandsSubli #rightCloth .rightImgBox > img:first-child {
+  visibility: visible;
+}
+.brandsRightList .toggleTextBox {
+  bottom: 0;
+  width: 100%;
   opacity: 1;
 }
-.brandsRightList .toggleTextBox button{
-  width:30%;
-  padding:5px;
-  position:absolute;
-  top:-42%;
-  right:0;
-  border:none;
-  border-bottom:1px solid #ffffff;
+.brandsRightList .toggleTextBox button {
+  width: 30%;
+  padding: 5px;
+  position: absolute;
+  top: -42%;
+  right: 0;
+  border: none;
+  border-bottom: 1px solid #ffffff;
   background-color: #ffffff85;
 }
-.brandsRightList .toggleTextBox button:hover{
+.brandsRightList .toggleTextBox button:hover {
   background-color: #00000060;
-  border-bottom:2px solid #000000;
-  color:white;
+  border-bottom: 2px solid #000000;
+  color: white;
 }
-.brandsRightList .toggleTextBox>p:first-child{
-  font-size:20px;
+.brandsRightList .toggleTextBox > p:first-child {
+  font-size: 20px;
 }
 /*outlet 카테고리 시작*/
-.outletSubli>#rightBest>li{
-  width:90%;
+.outletSubli > #rightBest > li {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.outletSubli>#rightBest>li>img{
-  height:100%;
+.outletSubli > #rightBest > li > img {
+  height: 100%;
 }
 /*Header CSS 끝*/
 /*Main CSS 시작*/
-main{
-    width:100vw;
+main {
+  width: 100vw;
+  height: auto;
 }
-#container{
-    width:100vw;
-    height:100vh;
+#container {
+  width: 100vw;
+  height: auto;
+  padding-bottom: 100px;
 }
-#fullPageSlider{
-    width:100vw;
-    height:fit-content;
-    background-color: wheat;
+#fullPageSlider {
+  width: 100vw;
+  height: auto;
 }
-#fullPageSlider img{
+#fullPageSlider img {
   width: 100%;
 }
-#bestSeller{
-    margin: 0px auto;
-    border:1px solid black;
-    width:80%;
-    height: 800px;
+#bestSeller {
+  display: flex;
+  margin: 100px auto;
+  border: 1px solid black;
+  width: 80%;
+  height: 800px;
 }
-#bestSellerLeft{
-    display: inline-block;
-    width:50%;
-    height:100%;
-    background-color: cadetblue;
+#bestSellerLeft {
+  flex: 1;
+  width: 50%;
+  height: 100%;
+  background-color: cadetblue;
+  overflow: hidden;
 }
-#bestSellerRight{
-    display: inline-block;
-    width:49%;
-    height:100%;
+#bestSellerLeft > video {
+  height: 100%;
 }
-#bestText{
-    display: inline-block;
-    width:100%;
-    height:49%;
-    padding:30px;
-    padding-top:100px;
-    position: relative;
+#bestSellerRight {
+  flex: 1;
+  width: 49%;
+  height: 100%;
 }
-#bestText>h1{
-    font-size: 3em;
-    margin:20px 0px;
+#bestText {
+  display: inline-block;
+  width: 100%;
+  height: 49%;
+  padding: 30px;
+  padding-top: 100px;
+  position: relative;
 }
-#bestText>span{
-    position:absolute;
-    right:10%;
-    top:80%;
-    padding:5px;
-    cursor: pointer;
-    font-weight: 600;
-    border-bottom:2px solid black;
+#bestText > h1 {
+  font-size: 3em;
+  margin: 20px 0px;
 }
-#bestText>span:hover{
-   background-color: #e2e2e2;
+#bestText > span {
+  position: absolute;
+  right: 10%;
+  top: 80%;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border-bottom: 2px solid black;
 }
-#bestItems{
-    display: inline-block;
-    width:100%;
-    height:50%;
-    background-color: aquamarine;
-    text-align: center;
-    position:relative;
+#bestText > span:hover {
+  background-color: #e2e2e2;
 }
-#bestItems>span:first-child{
-    position:absolute;
-    top:50%;
-    left:2%;
-    transform:translateY(-50%);
+#bestItems {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  justify-content: center;
+  position: relative;
 }
-#bestItems>span:last-child{
-    position:absolute;
-    top:50%;
-    right:2%;
-    transform:translateY(-50%);
+#bestItems span {
+  padding: 10px;
+  cursor: pointer;
 }
-#itemsBox{
-    display: inline-block;
-    border:1px solid black;
-    width:80%;
-    height:100%;
-    overflow: hidden;
+#bestItems span:hover {
+  background-color: #e2e2e2;
 }
-.terrexItems{
-  border:1px solid black;
-  width:100%;
-  height:100%;
-
-
+#bestItems > span:first-child {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+}
+#bestItems > span:last-child {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+}
+#itemsBox {
+  width: 600px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#itemScreen {
+  display: flex;
+  position: absolute;
+  left: 0%;
+  bottom: 0;
+  width: auto;
+  height: 100%;
+  transition: 0.3s;
+}
+.terrexItems {
+  width: 600px;
+  height: 100%;
+  display: flex;
+}
+.terrexItems img {
+  display: inline-block;
+  width: 50%;
+  height: auto;
+}
+footer {
+  width: 100vw;
+}
+#footerTop {
+  height: 350px;
+  padding: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footerTopBox {
+  width: 24%;
+  height: 100%;
+}
+.footerTopBox ul {
+  margin: 20px 0px;
+}
+.footerTopBox ul > li {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 14px;
+}
+.footerTopBox ul > li:hover {
+  text-decoration: underline;
+}
+.footerTopBox:last-child input[type="email"] {
+  width: 80%;
+  margin: 20px 0px;
+}
+.footerTopBox:last-child input[type="submit"] {
+  width: 19%;
+  margin: 20px -4px;
+  padding: 5px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  color: #ffffff;
+}
+.footerTopBox:last-child input[type="submit"]:hover {
+  background-color: #007fc2;
+  border: 1px solid #007fc2;
+}
+.footerTopBox:last-child span {
+  text-decoration: underline;
+}
+#footerBottom {
+  background-color: #333333;
+  color: #ffffff;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+}
+#footerBottom p {
+  color: #868686;
+  text-align: center;
+  font-size: 12px;
+  margin: 20px 0px;
+}
+#footerBottom p:last-child {
+  font-size: 16px;
+  color: #ffffff;
+}
+.socialAcc {
+  display: inline-block;
+  text-align: center;
+  padding: 50px;
+  border-bottom: 1px solid #868686;
+}
+.socialAcc h2 {
+  margin: 10px 0px;
+}
+.socialAcc i {
+  margin: 5px;
+}
+.socialAcc i:hover {
+  color: #007fc2;
 }
