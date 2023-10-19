@@ -13,6 +13,50 @@ window.addEventListener("scroll", () => {
     topMenu.style.position = "relative";
   }
 });
+
+//HeaderTop 배너
+var interval;
+const banners = document.querySelector(".topBanner");
+document.addEventListener("DOMContentLoaded", () => {
+  // 롤링 초기화
+  interval = window.setInterval(rollingCallback, 3000);
+
+  //마우스 호버시 롤링이 멈추었다 벗어나면 다시 롤링이 되도록 처리
+  document
+    .querySelector(".topBanner")
+    .addEventListener("mouseover", function () {
+      window.clearInterval(interval);
+    });
+  document
+    .querySelector(".topBanner")
+    .addEventListener("mouseout", function () {
+      interval = window.setInterval(rollingCallback, 3000);
+    });
+});
+
+function rollingCallback() {
+  //.prev 클래스 삭제
+  document.querySelector(".topBanner .prev").classList.remove("prev");
+
+  //.current -> .prev
+  let current = document.querySelector(".topBanner .current");
+  current.classList.remove("current");
+  current.classList.add("prev");
+
+  //.next -> .current
+  let next = document.querySelector(".topBanner .next");
+
+  if (next.nextElementSibling == null) {
+    document
+      .querySelector(".topBanner ul li:first-child")
+      .classList.add("next");
+  } else {
+    next.nextElementSibling.classList.add("next");
+  }
+  next.classList.remove("next");
+  next.classList.add("current");
+}
+
 //Menu
 const mainList = document.querySelectorAll(".mainList");
 const dropMenu = document.querySelectorAll(".dropdownMenu");
@@ -245,3 +289,4 @@ function rightBEvent() {
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
   }
 }
+// terrex 캐러셀 script 끝

@@ -90,37 +90,57 @@ form > button:hover {
 /*헤더 CSS 시작*/
 header {
   width: 100vw;
-  background-color: #ffffff;
 }
-#headerTop {
-  width: 100vw;
-  height: 30px;
+.headerTop {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.topBanner {
   position: relative;
-  border-bottom: 1px solid #000000;
+  width: 100%;
+  height: 32px;
+  font-size: 0.875rem;
+  padding: 5px 15px;
+  background-color: #f0f0f0;
 }
-#headerTop > ul {
+.topBanner > .wrap {
+  position: relative;
+  width: auto;
+  height: 100%;
+  overflow: hidden;
+}
+.topBanner li {
   position: absolute;
-  top: 50%;
-  right: 1%;
-  transform: translateY(-50%);
+  top: -36px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#headerTop > ul > a {
-  border-right: 1px solid #ccc;
+
+.topBanner li.prev {
+  top: 36px;
+  transition: top 0.5s ease;
 }
-#headerTop > ul > a:hover {
-  font-weight: 600;
-  color:#007fc2;
+.topBanner li.current {
+  top: 0;
+  transition: top 0.5s ease;
 }
-#headerTop > ul > a > li {
-  display: inline-block;
-  text-align: center;
-  padding: 0px 15px;
-  font-size: 14px;
+.topBanner li.next {
+  top: -36px;
+}
+.topBanner a {
+  display: block;
+  display: -webkit-box;
+  text-decoration: none;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #000;
 }
 #headerBottom {
   width: 100vw;
   height: 70px;
-
   position: relative;
   display: flex;
 }
@@ -168,6 +188,7 @@ nav {
 }
 #iconMenu span:hover {
   color: #007fc2;
+  transition: all 0.3s;
 }
 /*드롭다운 메뉴 CSS*/
 .dropdownMenu {
