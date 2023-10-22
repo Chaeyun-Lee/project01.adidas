@@ -1,7 +1,7 @@
 //Modal
 const modal = document.querySelector("#adiClub");
-modal.showModal();
 
+modal.showModal();
 window.addEventListener("scroll", () => {
   const topMenu = document.querySelector("#headerBottom");
   if (window.scrollY > 10) {
@@ -249,21 +249,18 @@ for (let i = 0; i < brandsSubList.length; i++) {
 let myIndex = 0;
 const itemScreen = document.querySelector("#itemScreen");
 carousel();
-setInterval(carousel, 2000);
+setInterval(carousel, 3000);
 
 function carousel() {
-  if (myIndex < 600) {console.log(myIndex+'slide');
+  if (myIndex < 600) {
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
     myIndex += 600;
-    
-  } else if (myIndex >= 600 && myIndex < 1200) {console.log(myIndex+'slide');
+  } else if (myIndex >= 600 && myIndex <= 1200) {
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
     myIndex += 600;
-    
-  } else if (myIndex >= 1200) {console.log(myIndex+'slide');
-    itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    myIndex=0;
-    
+  } else if (myIndex >= 1200) {
+    myIndex = 0;
+    itemScreen.style.transform = `translateX(${myIndex}px)`;
   }
 }
 
@@ -275,34 +272,21 @@ rightB.addEventListener("click", rightBEvent);
 
 function leftBEvent() {
   if (myIndex > 0) {
-    myIndex -= 600;console.log(myIndex+'left');
+    myIndex -= 600;
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
   } else if (myIndex == 0) {
-    myIndex = 1200;console.log(myIndex+'left');
+    myIndex = 1200;
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
   }
 }
 
 function rightBEvent() {
-  if (myIndex < 1200) {
-    myIndex+=600;
-    console.log(myIndex+'right');
+  if (myIndex >= 0 && myIndex < 1200) {
+    myIndex += 600;
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
-  } else if (myIndex === 1200) {
-    myIndex = 0; 
-    console.log(myIndex+'right');
+  } else if (myIndex >= 1200) {
+    myIndex = 0;
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
   }
-  // if (myIndex < 1200) {
-  //   myIndex += 600;console.log(myIndex+'right');
-  //   itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
-  // } else if (myIndex >= 1200) {
-  //   myIndex = 0;console.log(myIndex+'right');
-  //   itemScreen.style.transform = `translateX(-${myIndex}px)`;
-  // }
 }
 // terrex 캐러셀 script 끝
