@@ -32,7 +32,7 @@ dialog {
   transform: translate(-50%, -50%);
   padding: 30px;
   width: 500px;
-  height: 600px;
+  height: 700px;
   text-align: center;
   border: none;
 }
@@ -53,6 +53,9 @@ form > input {
   border: 1px solid #000000;
   border-radius: 0px;
   margin: 10px;
+}
+form > input[type="email"]:focus {
+  background-color: #007ec249;
 }
 form > p:nth-child(2) {
   font-size: 14px;
@@ -148,11 +151,13 @@ header {
   flex: 1;
   padding: 0px 30px;
   text-align: center;
+  cursor: pointer;
 }
-#logoImg > img {
+#logoImg > a > img {
   height: 100%;
 }
 nav {
+  display: inline-block;
   flex: 3;
 }
 #mainMenu {
@@ -185,6 +190,9 @@ nav {
 #iconMenu span {
   font-size: 32px;
   cursor: pointer;
+}
+#iconMenu>span.menu{
+  display: none;
 }
 #iconMenu span:hover {
   color: #007fc2;
@@ -295,6 +303,7 @@ nav {
 #rightAcc > li {
   height: 100%;
   text-align: center;
+  cursor: pointer;
 }
 .img2Box {
   width: 60%;
@@ -303,6 +312,7 @@ nav {
 }
 .img2Box > li {
   display: inline-block;
+  cursor: pointer;
 }
 .rightImgBox {
   width: 70%;
@@ -313,6 +323,7 @@ nav {
 }
 .rightImgBox > img {
   width: 100%;
+  cursor: pointer;
 }
 .rightImgBox > img:last-child {
   width: 100%;
@@ -413,6 +424,7 @@ nav {
 }
 .menSubli .img2Box > li > img {
   width: 100%;
+  height: 100%;
 }
 .rightImgBox > img {
   height: 100%;
@@ -676,15 +688,13 @@ main {
 #bestSeller {
   display: flex;
   margin: 100px auto;
-  border: 1px solid black;
   width: 80%;
-  height: 800px;
+  height: 80vh;
 }
 #bestSellerLeft {
   flex: 1;
   width: 50%;
   height: 100%;
-  background-color: cadetblue;
   overflow: hidden;
 }
 #bestSellerLeft > video {
@@ -694,13 +704,15 @@ main {
   flex: 1;
   width: 49%;
   height: 100%;
+  border: 1px solid #ccc;
+  border-left: none;
 }
 #bestText {
   display: inline-block;
   width: 100%;
   height: 49%;
-  padding: 10%;
-  padding-top: 20%;
+  padding: 30px;
+  padding-top: 100px;
   position: relative;
 }
 #bestText > h1 {
@@ -710,7 +722,7 @@ main {
 #bestText > span {
   position: absolute;
   right: 10%;
-  bottom: 0%;
+  top: 80%;
   padding: 5px 10px;
   cursor: pointer;
   font-weight: 600;
@@ -730,6 +742,7 @@ main {
 #bestItems span {
   padding: 10px;
   cursor: pointer;
+  z-index: 100;
 }
 #bestItems span:hover {
   background-color: #e2e2e2;
@@ -748,7 +761,7 @@ main {
 }
 #itemsBox {
   width: 600px;
-  height: 100%;
+  height: 90%;
   overflow: hidden;
   position: relative;
 }
@@ -762,6 +775,7 @@ main {
   transition: 0.3s;
 }
 .terrexItems {
+  cursor: pointer;
   width: 600px;
   height: 100%;
   display: flex;
@@ -771,6 +785,33 @@ main {
   width: 50%;
   height: auto;
 }
+#fullPageFootball {
+  width: 100%;
+}
+#fullPageFootball > div:first-child img {
+  width: 100%;
+}
+#fullPageFootball > div:last-child {
+  padding: 30px;
+  text-align: center;
+}
+#fullPageFootball > div:last-child p {
+  margin: 30px 0px;
+}
+#fullPageFootball > div:last-child button {
+  padding: 10px;
+  width: 120px;
+  font-size: 16px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 30px;
+}
+#fullPageFootball > div:last-child button:hover {
+  background-color: #e2e2e2;
+  color: #000000;
+}
+/* Footer CSS */
 footer {
   width: 100vw;
 }
@@ -845,4 +886,45 @@ footer {
 }
 .socialAcc i:hover {
   color: #007fc2;
+}
+
+@media screen and (max-width:1024px){
+  #headerBottom {
+    height: 60px;
+    /* display: flex; */
+  }
+  #logoImg {
+    flex: 1;
+    margin: 0px auto;
+    padding: 0px 30px;
+  }
+  nav {
+    display: none;
+  }
+  #iconMenu {
+    display: block;
+    position: absolute;
+    top:50%;
+    height: 35px;
+    transform: translateY(-50%);
+    width: 100vw;
+    /* border:1px solid black; */
+  }
+  #iconMenu>span:not(.person) {
+    display: none;
+  }
+  #iconMenu>span.menu{
+    display: block;
+    position:absolute;
+    left:2%;
+    font-size:36px;
+  }
+  #iconMenu>span.person{
+    position:absolute;
+    right:2%;
+    font-size:36px;
+  }
+  #bestSellerLeft {
+    display: none;
+  }
 }
