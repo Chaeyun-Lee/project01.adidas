@@ -848,7 +848,7 @@
           </ul>
         </div>
         <div class="footerTopBox">
-          <h3>뉴스레터 구독</h3>
+          <h3 class="newsLetter">뉴스레터 구독</h3>
           <p>매주 최신 컬렉션과 이벤트 소식을 제일 먼저 받아 보세요.</p>
           <form action="">
             <input type="email" placeholder="* 이메일을 입력하세요" />
@@ -880,4 +880,11 @@
     </footer>
   </body>
   <script src="js/project01.js"></script>
+  <script>
+    $(function(){
+      $('.footerTopBox h3').click(function(){
+        $(this).siblings('ul').slideToggle(500);
+      })
+    })
+  </script>
 </html>

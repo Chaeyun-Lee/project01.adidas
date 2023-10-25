@@ -55,7 +55,9 @@ form > input {
   margin: 10px;
 }
 form > input[type="email"]:focus {
-  background-color: #007ec249;
+  background-color: #007ec231;
+  border: 1px solid #007fc2;
+  outline: none;
 }
 form > p:nth-child(2) {
   font-size: 14px;
@@ -675,8 +677,7 @@ main {
 }
 #container {
   width: 100vw;
-  height: auto;
-  padding-bottom: 100px;
+  height: fit-content;
 }
 #fullPageSlider {
   width: 100vw;
@@ -888,6 +889,8 @@ footer {
   color: #007fc2;
 }
 
+/*태블릿, 모바일 CSS*/
+
 @media screen and (max-width:1024px){
   #headerBottom {
     height: 60px;
@@ -924,7 +927,73 @@ footer {
     right:2%;
     font-size:36px;
   }
+  #bestSeller {
+  display: flex;
+  flex-flow:column wrap;
+  margin: 100px auto;
+  width: 80%;
+  height: 80vh;
+}
   #bestSellerLeft {
+    width: 100%;
+  }
+  #bestSellerRight {
+    width:100%;
+    border: 1px solid #ccc;
+    border-top:none;
+  }
+  #bestText {
+    padding-top: 30px;
+    height:200px;
+    position: relative;
+  }
+  #bestText > h1 {
+    font-size: 2em;
+    margin: 20px 0px;
+  }
+  #bestText > span {
+    position: absolute;
+    right: 10%;
+    top:110%;
+    padding: 5px 10px;
+    border-bottom: 2px solid black;
+  }
+  #bestItems {
     display: none;
+  }
+  #footerTop {
+    display: block;
+    height: fit-content;
+  }
+  .footerTopBox{
+    width:100%;
+  }
+  .footerTopBox>h3:not(.newsLetter) {
+    width:100%;
+    padding:5px;
+    border-bottom:1px solid #ccc;
+    padding-left:5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  .footerTopBox>ul{
+    display: none;
+  }
+  .footerTopBox>ul{
+    margin:0px;
+    border:1px solid #ccc;
+    border-top:none;
+  }
+  .footerTopBox:last-child{
+    width:100%;
+    border:1px solid #ccc;
+    padding:10px;
+  }
+  .footerTopBox:last-child input[type="email"] {
+    margin: 10px 0px;
+    outline: none;
+  }
+  .footerTopBox:last-child input[type="submit"] {
+    margin: 10px -4px;
   }
 }
