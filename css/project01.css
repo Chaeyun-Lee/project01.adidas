@@ -193,7 +193,7 @@ nav {
   font-size: 32px;
   cursor: pointer;
 }
-#iconMenu>span.menu{
+#iconMenu > span.menu {
   display: none;
 }
 #iconMenu span:hover {
@@ -701,6 +701,9 @@ main {
 #bestSellerLeft > video {
   height: 100%;
 }
+#bestSellerLeft > img {
+  display: none;
+}
 #bestSellerRight {
   flex: 1;
   width: 49%;
@@ -793,6 +796,7 @@ main {
   width: 100%;
 }
 #fullPageFootball > div:last-child {
+  width: 100%;
   padding: 30px;
   text-align: center;
 }
@@ -891,7 +895,7 @@ footer {
 
 /*태블릿, 모바일 CSS*/
 
-@media screen and (max-width:1024px){
+@media screen and (max-width: 1024px) {
   #headerBottom {
     height: 60px;
     /* display: flex; */
@@ -900,51 +904,145 @@ footer {
     flex: 1;
     margin: 0px auto;
     padding: 0px 30px;
+    cursor: pointer;
   }
   nav {
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 30%;
+    min-width: 200px;
+    height: 100vh;
+    background-color: #ffffff;
+    transition: all 0.5s;
+  }
+  .mobileSlide {
+    position: absolute;
+    left: -50vh;
+    transition: all 0.5s;
+  }
+  #mainMenu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    border: 1px solid #ccc;
+  }
+  #mainMenu > li {
+    width: 100%;
+  }
+  #mainMenu > li > a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  .dropdownMenu {
+    width: 100%;
+    height: fit-content;
+    background-color: #ffffffd5;
+    display: flex;
+    visibility: visible;
+    z-index: 100;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+  }
+  #menSubLeft,
+  #womenSubLeft,
+  #kidsSubLeft,
+  #sportsSubLeft,
+  #brandsSubLeft,
+  #outletSubLeft {
+    height: 400px;
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+  }
+  #menSubLeft > p,
+  #womenSubLeft > p,
+  #kidsSubLeft > p,
+  #sportsSubLeft > p,
+  #brandsSubLeft > p,
+  #outletSubLeft > p {
     display: none;
+  }
+  #menSubLeft > li,
+  #womenSubLeft > li,
+  #kidsSubLeft > li,
+  #sportsSubLeft > li,
+  #brandsSubLeft > li,
+  #outletSubLeft > li {
+    border-top: 1px solid #ccc;
+    padding: 0px;
+  }
+  #rightBest,
+  #rightNew,
+  #rightShoe,
+  #rightCloth,
+  #rightAcc,
+  .sportsRightList,
+  .rightImgBox {
+    display: none;
+    visibility: hidden;
   }
   #iconMenu {
     display: block;
     position: absolute;
-    top:50%;
+    top: 50%;
     height: 35px;
     transform: translateY(-50%);
     width: 100vw;
     /* border:1px solid black; */
   }
-  #iconMenu>span:not(.person) {
+  #iconMenu > span:not(.person) {
     display: none;
   }
-  #iconMenu>span.menu{
+  #iconMenu > span.menu {
     display: block;
-    position:absolute;
-    left:2%;
-    font-size:36px;
+    position: absolute;
+    left: 2%;
+    font-size: 36px;
   }
-  #iconMenu>span.person{
-    position:absolute;
-    right:2%;
-    font-size:36px;
+  #iconMenu > span.person {
+    position: absolute;
+    right: 2%;
+    font-size: 36px;
   }
+  /* Main CSS */
   #bestSeller {
-  display: flex;
-  flex-flow:column wrap;
-  margin: 100px auto;
-  width: 80%;
-  height: 80vh;
-}
+    display: flex;
+    flex-flow: column wrap;
+    margin: 50px auto;
+    width: 80%;
+    height: 80vh;
+  }
   #bestSellerLeft {
+    flex: content;
     width: 100%;
+    border: 1px solid black;
+    position: relative;
+  }
+  #bestSellerLeft > video {
+    display: none;
+  }
+  #bestSellerLeft > img {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
   #bestSellerRight {
-    width:100%;
+    flex: 1;
+    width: 100%;
     border: 1px solid #ccc;
-    border-top:none;
+    border-top: none;
   }
   #bestText {
     padding-top: 30px;
-    height:200px;
+    height: 200px;
     position: relative;
   }
   #bestText > h1 {
@@ -954,40 +1052,43 @@ footer {
   #bestText > span {
     position: absolute;
     right: 10%;
-    top:110%;
+    top: 130%;
     padding: 5px 10px;
     border-bottom: 2px solid black;
   }
   #bestItems {
     display: none;
   }
+  #fullPageFootball > div:last-child > h1 {
+    font-size: 1.5rem;
+  }
   #footerTop {
     display: block;
     height: fit-content;
   }
-  .footerTopBox{
-    width:100%;
+  .footerTopBox {
+    width: 100%;
   }
-  .footerTopBox>h3:not(.newsLetter) {
-    width:100%;
-    padding:5px;
-    border-bottom:1px solid #ccc;
-    padding-left:5px;
+  .footerTopBox > h3:not(.newsLetter) {
+    width: 100%;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 5px;
     font-size: 1em;
     cursor: pointer;
   }
-  .footerTopBox>ul{
+  .footerTopBox > ul {
     display: none;
   }
-  .footerTopBox>ul{
-    margin:0px;
-    border:1px solid #ccc;
-    border-top:none;
+  .footerTopBox > ul {
+    margin: 0px;
+    border: 1px solid #ccc;
+    border-top: none;
   }
-  .footerTopBox:last-child{
-    width:100%;
-    border:1px solid #ccc;
-    padding:10px;
+  .footerTopBox:last-child {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
   }
   .footerTopBox:last-child input[type="email"] {
     margin: 10px 0px;
