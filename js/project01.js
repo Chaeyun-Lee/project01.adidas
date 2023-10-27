@@ -248,8 +248,11 @@ for (let i = 0; i < brandsSubList.length; i++) {
 // terrex 캐러셀 script
 let myIndex = 0;
 const itemScreen = document.querySelector("#itemScreen");
+const bestItems = document.querySelector('#bestItems');
+
 carousel();
 setInterval(carousel, 2000);
+
 
 function carousel() {
   if (myIndex < 600) {console.log(myIndex+'slide');
@@ -305,7 +308,13 @@ const menuIcon = document.querySelector('#iconMenu .menu');
 const mobileNav = document.querySelector('nav');
 
 menuIcon.addEventListener('click',function(){
-  console.log('click');
   mobileNav.classList.toggle('mobileSlide');
  
+})
+
+//jquery
+$(function(){
+  $('.footerTopBox h3').click(function(){
+    $(this).siblings('ul').slideToggle(500);
+  })
 })
