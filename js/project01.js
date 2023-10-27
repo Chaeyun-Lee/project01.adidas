@@ -1,7 +1,7 @@
 //Modal
 const modal = document.querySelector("#adiClub");
-
 modal.showModal();
+
 window.addEventListener("scroll", () => {
   const topMenu = document.querySelector("#headerBottom");
   if (window.scrollY > 10) {
@@ -249,18 +249,21 @@ for (let i = 0; i < brandsSubList.length; i++) {
 let myIndex = 0;
 const itemScreen = document.querySelector("#itemScreen");
 carousel();
-setInterval(carousel, 3000);
+setInterval(carousel, 2000);
 
 function carousel() {
-  if (myIndex < 600) {
+  if (myIndex < 600) {console.log(myIndex+'slide');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
     myIndex += 600;
-  } else if (myIndex >= 600 && myIndex <= 1200) {
+    
+  } else if (myIndex >= 600 && myIndex < 1200) {console.log(myIndex+'slide');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
     myIndex += 600;
-  } else if (myIndex >= 1200) {
-    myIndex = 0;
-    itemScreen.style.transform = `translateX(${myIndex}px)`;
+    
+  } else if (myIndex >= 1200) {console.log(myIndex+'slide');
+    itemScreen.style.transform = `translateX(-${myIndex}px)`;
+    myIndex=0;
+    
   }
 }
 
@@ -272,21 +275,37 @@ rightB.addEventListener("click", rightBEvent);
 
 function leftBEvent() {
   if (myIndex > 0) {
-    myIndex -= 600;
+    myIndex -= 600;console.log(myIndex+'left');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
+    
   } else if (myIndex == 0) {
-    myIndex = 1200;
+    myIndex = 1200;console.log(myIndex+'left');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
+    
   }
 }
 
 function rightBEvent() {
-  if (myIndex >= 0 && myIndex < 1200) {
-    myIndex += 600;
+  if (myIndex < 1200) {
+    myIndex+=600;
+    console.log(myIndex+'right');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
-  } else if (myIndex >= 1200) {
-    myIndex = 0;
+    
+  } else if (myIndex === 1200) {
+    myIndex = 0; 
+    console.log(myIndex+'right');
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
   }
 }
 // terrex 캐러셀 script 끝
+
+//mobile 기기 
+
+const menuIcon = document.querySelector('#iconMenu .menu');
+const mobileNav = document.querySelector('nav');
+
+menuIcon.addEventListener('click',function(){
+  console.log('click');
+  mobileNav.classList.toggle('mobileSlide');
+ 
+})

@@ -180,6 +180,12 @@ nav {
   text-align: center;
   padding: 20px 15px;
 }
+.mainList > a > span{
+  position:absolute;
+  top:50%;
+  right:3%;
+  transform:translateY(-50%)
+}
 .boldMenu {
   font-weight: 600;
 }
@@ -910,7 +916,7 @@ footer {
     /* display: none; */
     position: absolute;
     top: 100%;
-    left: 0;
+    left: -50vw;
     width: 30%;
     min-width: 200px;
     height: 100vh;
@@ -919,7 +925,7 @@ footer {
   }
   .mobileSlide {
     position: absolute;
-    left: -50vh;
+    left: 0;
     transition: all 0.5s;
   }
   #mainMenu {
@@ -939,6 +945,15 @@ footer {
     width: 100%;
     padding: 10px 15px;
   }
+  .mainList{
+    position:relative;
+  }
+  .mainList > a > span{
+    position:absolute;
+    top:50%;
+    right:3%;
+    transform:translateY(-50%)
+  }
   .dropdownMenu {
     width: 100%;
     height: fit-content;
@@ -949,6 +964,7 @@ footer {
     position: absolute;
     top: 0%;
     left: 100%;
+    visibility: hidden;
   }
   #menSubLeft,
   #womenSubLeft,
@@ -956,7 +972,7 @@ footer {
   #sportsSubLeft,
   #brandsSubLeft,
   #outletSubLeft {
-    height: 400px;
+    height: fit-content;
     width: 100%;
     padding: 0;
     display: inline-block;
@@ -1022,7 +1038,6 @@ footer {
   #bestSellerLeft {
     flex: content;
     width: 100%;
-    border: 1px solid black;
     position: relative;
   }
   #bestSellerLeft > video {
