@@ -248,73 +248,72 @@ for (let i = 0; i < brandsSubList.length; i++) {
 // terrex 캐러셀 script
 let myIndex = 0;
 const itemScreen = document.querySelector("#itemScreen");
-const bestItems = document.querySelector('#bestItems');
+const bestItems = document.querySelector("#bestItems");
+const itemsButton = document.querySelectorAll(".slideButtons");
 
 carousel();
 setInterval(carousel, 2000);
 
-
 function carousel() {
-  if (myIndex < 600) {console.log(myIndex+'slide');
+  for (let i = 0; i < itemsButton.length; i++) {
+    itemsButton[i].style.backgroundColor = "#b8b8b8";
+  }
+
+  if (myIndex < 600) {
+    console.log(myIndex + "slide");
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
+    itemsButton[0].style.backgroundColor = "#151515";
     myIndex += 600;
-    
-  } else if (myIndex >= 600 && myIndex < 1200) {console.log(myIndex+'slide');
+  } else if (myIndex >= 600 && myIndex < 1200) {
+    console.log(myIndex + "slide");
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
+    itemsButton[1].style.backgroundColor = "#151515";
     myIndex += 600;
-    
-  } else if (myIndex >= 1200) {console.log(myIndex+'slide');
+  } else if (myIndex >= 1200) {
+    console.log(myIndex + "slide");
     itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    myIndex=0;
-    
+    itemsButton[2].style.backgroundColor = "#151515";
+    myIndex = 0;
   }
 }
 
-const leftB = document.querySelector("#leftBtn");
-const rightB = document.querySelector("#rightBtn");
+for (let k = 0; k < itemsButton.length; k++) {
 
-leftB.addEventListener("click", leftBEvent);
-rightB.addEventListener("click", rightBEvent);
+  itemsButton[k].addEventListener("click", function () {
 
-function leftBEvent() {
-  if (myIndex > 0) {
-    myIndex -= 600;console.log(myIndex+'left');
-    itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
-  } else if (myIndex == 0) {
-    myIndex = 1200;console.log(myIndex+'left');
-    itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
-  }
-}
+    for (let i = 0; i < itemsButton.length; i++) {
+      itemsButton[i].style.backgroundColor = "#b8b8b8";
+    }
 
-function rightBEvent() {
-  if (myIndex < 1200) {
-    myIndex+=600;
-    console.log(myIndex+'right');
-    itemScreen.style.transform = `translateX(-${myIndex}px)`;
-    
-  } else if (myIndex === 1200) {
-    myIndex = 0; 
-    console.log(myIndex+'right');
-    itemScreen.style.transform = `translateX(-${myIndex}px)`;
-  }
+    if (k == 0) {
+      myIndex = 0;
+      itemsButton[k].style.backgroundColor = "#151515";
+      itemScreen.style.transform = "translateX(0px)";
+    } else if (k == 1) {
+      myIndex = 600;
+      itemsButton[k].style.backgroundColor = "#151515";
+      itemScreen.style.transform = "translateX(-600px)";
+    } else if (k == 2) {
+      myIndex = 1200;
+      itemsButton[k].style.backgroundColor = "#151515";
+      itemScreen.style.transform = "translateX(-1200px)";
+    }
+  });
 }
 // terrex 캐러셀 script 끝
 
-//mobile 기기 
+//mobile 기기
 
-const menuIcon = document.querySelector('#iconMenu .menu');
-const mobileNav = document.querySelector('nav');
+const menuIcon = document.querySelector("#iconMenu .menu");
+const mobileNav = document.querySelector("nav");
 
-menuIcon.addEventListener('click',function(){
-  mobileNav.classList.toggle('mobileSlide');
- 
-})
+menuIcon.addEventListener("click", function () {
+  mobileNav.classList.toggle("mobileSlide");
+});
 
 //jquery
-$(function(){
-  $('.footerTopBox h3').click(function(){
-    $(this).siblings('ul').slideToggle(500);
-  })
-})
+$(function () {
+  $(".footerTopBox h3").click(function () {
+    $(this).siblings("ul").slideToggle(500);
+  });
+});

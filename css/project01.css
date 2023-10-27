@@ -181,10 +181,7 @@ nav {
   padding: 20px 15px;
 }
 .mainList > a > span{
-  position:absolute;
-  top:50%;
-  right:3%;
-  transform:translateY(-50%)
+  display: none;
 }
 .boldMenu {
   font-weight: 600;
@@ -743,18 +740,28 @@ main {
 }
 #bestItems {
   display: flex;
+  flex-flow: column nowrap;
   width: 100%;
   height: 50%;
   text-align: center;
   justify-content: center;
   position: relative;
 }
+#itemsButton span{
+  display: inline-block;
+  width:50px;
+  height:4px;
+  padding:1px;
+  border-radius: 10px;
+  background-color: #b8b8b8;
+  margin:0px 5px;
+}
 #bestItems span {
-  padding: 10px;
+  /* padding: 10px; */
   cursor: pointer;
   z-index: 100;
 }
-#bestItems span:hover {
+/* #bestItems span:hover {
   background-color: #e2e2e2;
 }
 #bestItems > span:first-child {
@@ -768,12 +775,13 @@ main {
   top: 50%;
   right: 2%;
   transform: translateY(-50%);
-}
+} */
 #itemsBox {
   width: 600px;
   height: 90%;
   overflow: hidden;
   position: relative;
+  margin:0px auto;
 }
 #itemScreen {
   display: flex;
@@ -954,6 +962,7 @@ footer {
     position:relative;
   }
   .mainList > a > span{
+    display: inline;
     position:absolute;
     top:50%;
     right:3%;
@@ -1069,10 +1078,11 @@ footer {
     font-size: 1.5em;
     margin: 20px 0px;
   }
+
   #bestText > span {
     position: absolute;
     right: 10%;
-    top: 140%;
+    top: 130%;
     padding: 5px 10px;
     border-bottom: 2px solid black;
   }
