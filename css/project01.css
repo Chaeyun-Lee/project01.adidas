@@ -311,7 +311,7 @@ nav {
   cursor: pointer;
 }
 .img2Box {
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
 }
@@ -339,25 +339,15 @@ nav {
   visibility: hidden;
 }
 .rightTextBox {
-  width: 30%;
+  width: 40%;
   height: 100%;
-  padding: 50px 30px;
+  padding: 50px 20px;
   background-color: #ffffff;
 }
 .rightTextBox p:first-child {
   font-weight: 600;
   font-size: 22px;
   margin: 30px 0px;
-}
-.rightTextBox button {
-  width: 70%;
-  padding: 5px;
-  font-size: 14px;
-  border: none;
-  border-bottom: 2px solid black;
-  background-color: none;
-  margin: 30px 0px;
-  cursor: pointer;
 }
 .toggleTextBox {
   background-color: #0000005e;
@@ -697,12 +687,13 @@ main {
 }
 #bestSellerLeft {
   flex: 1;
-  width: 50%;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
 #bestSellerLeft > video {
-  height: 100%;
+  /* height: 100%; */
+  width:100%;
 }
 #bestSellerLeft > img {
   display: none;
@@ -718,25 +709,26 @@ main {
   display: inline-block;
   width: 100%;
   height: 49%;
-  padding: 30px;
-  padding-top: 100px;
+  padding:0 30px;
+  padding-top: 5%;
   position: relative;
 }
 #bestText > h1 {
-  font-size: 3em;
-  margin: 20px 0px;
+  font-size: 2.5em;
+  margin: 10px 0px;
 }
 #bestText > span {
-  position: absolute;
-  right: 10%;
-  top: 80%;
+  float: right;
+  display: block;
+  width:fit-content;
+  margin:10px 0;
   padding: 5px 10px;
   cursor: pointer;
   font-weight: 600;
   border-bottom: 2px solid black;
 }
 #bestText > span:hover {
-  background-color: #e2e2e2;
+  background-color: #ececec;
 }
 #bestItems {
   display: flex;
@@ -777,7 +769,7 @@ main {
   transform: translateY(-50%);
 } */
 #itemsBox {
-  width: 600px;
+  width:600px;
   height: 90%;
   overflow: hidden;
   position: relative;
@@ -904,8 +896,9 @@ footer {
 .socialAcc h2 {
   margin: 10px 0px;
 }
-.socialAcc i {
+.socialAcc > ul >li {
   margin: 5px;
+  display: inline-block;
 }
 .socialAcc i:hover {
   color: #007fc2;
@@ -928,7 +921,7 @@ footer {
     /* display: none; */
     position: absolute;
     top: 100%;
-    left: -50vw;
+    left: -60vw;
     width: 30%;
     min-width: 200px;
     height: 100vh;
@@ -1046,7 +1039,7 @@ footer {
     display: flex;
     flex-flow: column wrap;
     margin: 50px auto;
-    width: 80%;
+    width: 90%;
     height: 80vh;
   }
   #bestSellerLeft {
@@ -1072,19 +1065,15 @@ footer {
   #bestText {
     padding-top: 30px;
     height: 200px;
-    position: relative;
+    font-size: 0.9em;
   }
   #bestText > h1 {
     font-size: 1.5em;
-    margin: 20px 0px;
+    margin: 10px 0px;
   }
 
   #bestText > span {
-    position: absolute;
-    right: 10%;
-    top: 130%;
     padding: 5px 10px;
-    border-bottom: 2px solid black;
   }
   #bestItems {
     display: none;
