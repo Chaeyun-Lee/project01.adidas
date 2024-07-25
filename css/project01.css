@@ -674,11 +674,13 @@ main {
 }
 #fullPageSlider {
   width: 100vw;
-  height: auto;
+  height:100vh;
+  background:url(../img/fullPageSlide01.jpg) no-repeat;
+  background-size: 100%;
 }
-#fullPageSlider img {
+/* #fullPageSlider img {
   width: 100%;
-}
+} */
 #bestSeller {
   display: flex;
   margin: 100px auto;
@@ -910,6 +912,10 @@ footer {
   #headerBottom {
     height: 60px;
     /* display: flex; */
+  }
+  #fullPageSlider{
+    background: url(../img/adidasMobilePoster.jpeg) no-repeat;
+    background-size: 100%;
   }
   #logoImg {
     flex: 1;
